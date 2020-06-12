@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && ACCEPT_EULA=Y apt-get -y --no-install-recommends install clang lld lldb libc++-dev libc++abi-dev pkg-config cmake ninja-build msodbcsql17 unixodbc-dev \
     && pip3 install conan meson \
     && update-alternatives --install /usr/bin/cc cc /usr/bin/clang-10 100 \
-    && update-alternatives --install /usr/bin/c++ c++ /usr/bin/clang++-10 100
+    && update-alternatives --install /usr/bin/c++ c++ /usr/bin/clang++-10 100 \
     # Clean up 
     && rm -rf /var/lib/apt/lists/*
 
